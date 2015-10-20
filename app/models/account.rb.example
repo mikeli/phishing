@@ -1,0 +1,26 @@
+class Account < ActiveRecord::Base
+  def self.get_saml_settings
+    # this is just for testing purposes.
+    # should retrieve SAML-settings based on subdomain, IP-address, NameID or similar
+    settings = OneLogin::RubySaml::Settings.new
+    # Example settings data, replace this values!
+    settings.assertion_consumer_service_url = "http://localhost/saml/acs"
+    settings.assertion_consumer_logout_service_url = "http://localhost/saml/logout"
+    settings.issuer                         = "http://localhost/saml/metadata"
+    settings.idp_entity_id                  = ""
+    settings.idp_sso_target_url             = ""
+    settings.idp_slo_target_url             = ""
+    settings.idp_cert                       = 
+                                              "-----BEGIN CERTIFICATE-----
+                                              [CERT INFORMATION]
+                                              -----END CERTIFICATE-----"
+                                              
+    settings.name_identifier_format         = "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
+    # Optional for most SAML IdPs
+    settings.authn_context = "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport"
+    # Optional bindings (defaults to Redirect for logout POST for acs)
+    settings.assertion_consumer_service_binding = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+    settings.assertion_consumer_logout_service_binding = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+    settings
+  end
+end

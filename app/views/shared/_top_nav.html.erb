@@ -1,0 +1,160 @@
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>  
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+            <li>
+                <span class="m-r-sm text-muted welcome-message"> Welcome to KNEX: Security Access Review </span>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle count-info">
+                    <i class="fa fa-envelope"></i>  <span class="label label-warning">0</span>
+                </a>
+                <!-- Add Messages Model -->
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle count-info">
+                    <i class="fa fa-bell"></i>  <span class="label label-primary">0</span>
+                </a>
+                 <!-- Add Alert Model -->
+            </li>
+            <li>
+                <a id="log-out" href="/saml/logout">
+                    <i class="fa fa-sign-out"></i> Log out
+                </a>
+            </li>
+            <li>
+                <a class="right-sidebar-toggle">
+                    <i class="fa fa-tasks"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="right-sidebar" class="">
+        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+            <div class="sidebar-container" style="overflow: hidden; width: auto; height: 100%;">
+                <ul class="nav nav-tabs navs-3">
+                    <li class="active"><a href="#tab-1" data-toggle="tab">
+                        Notes
+                    </a></li>
+                    <li><a href="#tab-2" data-toggle="tab">
+                        Projects
+                    </a></li>
+                    <li class=""><a href="#tab-3" data-toggle="tab">
+                        <i class="fa fa-gear"></i>
+                    </a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab-1">
+                        <div class="sidebar-title">
+                            <h3> <i class="fa fa-comments-o"></i> Latest Notes</h3>
+                            <small><i class="fa fa-tim"></i> You have 1 Note.</small>
+                        </div>
+                        <div class="sidebar-message">
+                            <a href="#">
+                                <div class="pull-left text-center">
+                                    <div class="m-t-xs">
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    Please Complete the Access Review! :)
+                                    <br>
+                                    <small class="text-muted"><%= Date.today %> </small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-2">
+                        <div class="sidebar-title">
+                            <h3> <i class="fa fa-cube"></i> Latest Projects</h3>
+                            <small><i class="fa fa-tim"></i> You have 1 project. </small>
+                        </div>
+                        <ul class="sidebar-list">
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-right m-t-xs">9 hours ago</div>
+                                    <h4>SOX Complaince Review</h4>
+                                    Every quarter we are looking to complete an access reviews for critical applications. 
+                                    Buisness and Application Owners will have to validate User and Role in each applicaiton. 
+                                    <hr>
+                                    <div class="small">Completion with: 100%</div>
+                                    <div class="progress progress-mini">
+                                        <div class="progress-bar progress-bar-danger" style="width: 100%;"></div>
+                                    </div>
+                                    <div class="small text-muted m-t-xs">Project end: 23:59 pm - 12.31.2015</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="tab-3">
+                        <div class="sidebar-title">
+                            <h3><i class="fa fa-gears"></i> Settings</h3>
+                            <small><i class="fa fa-tim"></i></small>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                Show notifications
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" id="example" class="onoffswitch-checkbox" name="collapsemenu">
+                                    <label for="example" class="onoffswitch-label">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                Disable Chat
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" id="example2" class="onoffswitch-checkbox" checked="" name="collapsemenu">
+                                    <label for="example2" class="onoffswitch-label">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                Enable history
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" id="example3" class="onoffswitch-checkbox" name="collapsemenu">
+                                    <label for="example3" class="onoffswitch-label">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-content">
+                            <h4>Settings</h4>
+                            <div class="small">
+                                There are still in Test. You cannot modify settings until V2.0 !
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <!-- End wrapper--><span role="status" aria-live="polite" class="select2-hidden-accessible"></span>
+</div>
+
+<div class="pace  pace-inactive">
+    <div class="pace-progress" style="transform: translate3d(100%, 0px, 0px);" data-progress-text="100%" data-progress="99">
+        <div class="pace-progress-inner"></div>
+    </div>
+    <div class="pace-activity"></div>
+</div>

@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: phishing_dev
+  pool: 5
+  host: localhost
+  username: postgres
+  password: W3lcome1
+
+test: &TEST
+  adapter: postgresql
+  encoding: utf8
+  database: phishing_test
+  pool: 5
+  host: localhost
+  username: postgres
+  password: W3lcome1
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: phishing
+  pool: 5
+  host: localhost
+  username: postgres
+  password: W3lcome1

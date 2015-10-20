@@ -1,0 +1,6 @@
+setInterval(function(){
+  $.get("/catalog/1/new_items.js", function(data){
+    $("new_items").html(data);
+  },
+  "html")
+}, 30000);

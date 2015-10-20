@@ -1,0 +1,56 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <a class="close-canvas-menu"><i class="fa fa-times"></i></a>
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element"> 
+                    <span><img alt="image" class="img-circle" src="moose.png"></span>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear">
+                            <span class="block m-t-xs"> 
+                                <strong class="font-bold">
+                                    <%= session[:user_id] %> <b class="caret"></b>
+                                </strong>
+                            </span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <button class="btn btn-block btn-primary" id="login-buttons-logout"><a id="log-out" href="/saml/logout">Sign out</button>
+                    </ul>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <%= link_to 'Logout', {:controller => "saml", :action => "logout"}, :class => "btn btn-block btn-primary id='login-buttons-logout'" %>
+                    </ul>
+                </div>
+                <!--  
+                   <div class="logo-element" style="color:#e85e25;">
+                   <img alt="image" src="/rapid7.ico" /> 
+                --> 
+                <div class="logo-element" style="color:white;">
+                   <br>KNEX
+                </div>
+            </li>
+             <li>
+                    <a href="/"><i class="fa fa fa-sitemap"></i> <span class="nav-label">App Views</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <% App.all.each do | app | %>
+                            <li><a href="/"> <%= app.name %> </a></li>
+                        <% end %>
+                    </ul>
+                </li>
+            <li>
+                <a href="/welcome/metrics"><i class="fa fa-pie-chart"></i> <span class="nav-label">Metrics</span> <span class="label label-primary pull-right">NEW</span> </a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Reports</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="/"><i class="fa fa-file-excel-o"></i>Excel Report</a></li>
+                    <li><a href="/"><i class="fa fa-file-text"></i>CSV Report</a></li>
+                    <li><a href="/"><i class="fa fa-file-image-o"></i>HTML Report</a></li>
+                </ul>
+            </li>
+            <li class="special_link">
+                <a href="mailto:security@rapid7.com"><i class="fa fa-envelope"></i> <span class="nav-label">Contact InfoSec</span>
+            </li>
+        </ul>
+    </div>
+</nav>

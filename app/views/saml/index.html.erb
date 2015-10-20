@@ -1,0 +1,18 @@
+<% if session[:user_id].present? %>
+
+
+<% else %>
+    <div class="well">
+        <div class="middle-box text-center loginscreen animated fadeInDown">
+            <h1 class="logo-name">KX</h1>
+
+            <h3>Welcome to KNEX</h3>
+            <p>By Security for Security 
+            </p>
+            <form class="m-t" role="form" action="index.html">
+                    <a class="btn btn-sm btn-white btn-block" href="sso">Login through Okta</a>
+                <a href="https://rapid7.okta.com/reset-password"><small>Forgot password?</small></a>
+            </form>
+        </div>
+    </div>
+<% end %>
